@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// A model of magic eight ball 🎱
 class EightBallModel : CustomStringConvertible, CustomDebugStringConvertible {
     
     let initialResponseArray = [
@@ -73,7 +74,9 @@ class EightBallModel : CustomStringConvertible, CustomDebugStringConvertible {
     }
     
     /**
+     Tells the fortune by selecting a string from the response array randomly
      
+        - Returns : a random string from the response array
      */
     func tellForturtune() -> String? {
         if let responses = responseArray {

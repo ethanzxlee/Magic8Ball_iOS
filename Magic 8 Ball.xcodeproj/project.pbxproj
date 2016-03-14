@@ -56,12 +56,12 @@
 		A1B6FF301C8C46BD00A5FAD1 /* Magic 8 Ball */ = {
 			isa = PBXGroup;
 			children = (
-				A1B6FF311C8C46BD00A5FAD1 /* AppDelegate.swift */,
-				A1B6FF331C8C46BD00A5FAD1 /* ViewController.swift */,
-				A1B6FF351C8C46BD00A5FAD1 /* Main.storyboard */,
 				A1B6FF381C8C46BD00A5FAD1 /* Assets.xcassets */,
+				A1B6FF351C8C46BD00A5FAD1 /* Main.storyboard */,
 				A1B6FF3A1C8C46BD00A5FAD1 /* LaunchScreen.storyboard */,
 				A1B6FF3D1C8C46BD00A5FAD1 /* Info.plist */,
+				A1B6FF311C8C46BD00A5FAD1 /* AppDelegate.swift */,
+				A1B6FF331C8C46BD00A5FAD1 /* ViewController.swift */,
 				A1B6FF431C8C4B9700A5FAD1 /* EightBallModel.swift */,
 			);
 			path = "Magic 8 Ball";
@@ -291,6 +291,7 @@
 				A1B6FF421C8C46BD00A5FAD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
