@@ -10,9 +10,44 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let name = "Zhe Xian Lee"
+    let age = 21.0
+    
+    var eightBall : EightBallModel?
+    var questionArray: [String]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        print("Zhe Xian Lee")
+        print(String(format: "%.2f", age))
+        print("My name is \(name)")
+        print("")
+        
+        questionArray = [
+            "Will I get full marks for this lab?",
+            "Will the Cronulla sharks receive a premiership this year?",
+            "Will I end up becoming a cat person when I get old?"
+        ]
+        
+        let myResponse😎 = [
+            "Whatever",
+            "💩"
+        ]
+        
+        eightBall = EightBallModel(extraResponseArray: myResponse😎)
+        
+        if let questions = questionArray {
+            for question in questions {
+                print(question)
+                print(eightBall?.tellForturtune())
+                print("")
+            }
+        }
+        
+        print(eightBall?.description)
+        debugPrint(eightBall?.debugDescription)
+            
     }
 
     override func didReceiveMemoryWarning() {
