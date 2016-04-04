@@ -8,8 +8,10 @@
 
 import UIKit
 
-class HistoryViewController: UIViewController {
+class HistoryViewController: UITableViewController {
 
+    var questionResponseArray : [QuestionResponseModel] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

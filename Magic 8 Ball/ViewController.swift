@@ -35,6 +35,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "didDetectTapGesture:"))
     }
     
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "ShowHistoryViewController") {
+            if let historyViewController = segue.destinationViewController as? HistoryViewController {
+                historyViewController.questionResponseArray = self.questionResponseArray!
+            }
+        }
+    }
+    
 
     // MARK: - UITextFieldDelegate
     
@@ -47,13 +56,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         return false
     }
-    
-    
-    // MARK: - IBAction
-    
-//    @IBAction func historyButtonPressed(sender: AnyObject) {
-//        shakeMagicEightBall(sender)
-//    }
     
     
     // MARK: - Functions

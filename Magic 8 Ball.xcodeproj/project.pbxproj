@@ -65,12 +65,28 @@
 				A1B6FF3A1C8C46BD00A5FAD1 /* LaunchScreen.storyboard */,
 				A1B6FF3D1C8C46BD00A5FAD1 /* Info.plist */,
 				A1B6FF311C8C46BD00A5FAD1 /* AppDelegate.swift */,
-				A1B6FF331C8C46BD00A5FAD1 /* ViewController.swift */,
-				A1B6FF431C8C4B9700A5FAD1 /* EightBallModel.swift */,
-				C1F839CD1CB22173000AB1AB /* QuestionResponseModel.swift */,
-				C1F839CF1CB22943000AB1AB /* HistoryViewController.swift */,
+				C1F839D21CB22DDF000AB1AB /* ViewController */,
+				C1F839D11CB22DDA000AB1AB /* Model */,
 			);
 			path = "Magic 8 Ball";
+			sourceTree = "<group>";
+		};
+		C1F839D11CB22DDA000AB1AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A1B6FF431C8C4B9700A5FAD1 /* EightBallModel.swift */,
+				C1F839CD1CB22173000AB1AB /* QuestionResponseModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C1F839D21CB22DDF000AB1AB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A1B6FF331C8C46BD00A5FAD1 /* ViewController.swift */,
+				C1F839CF1CB22943000AB1AB /* HistoryViewController.swift */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
