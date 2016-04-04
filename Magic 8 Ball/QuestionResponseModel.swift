@@ -21,6 +21,7 @@ class QuestionResponseModel : NSObject, NSCoding {
     }
     
     // MARK: Archiving Paths
+    
     static let DocumentsDirectory = NSFileManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
     static let ArchiveURL = DocumentsDirectory.URLByAppendingPathComponent("questionResponseModel")
     

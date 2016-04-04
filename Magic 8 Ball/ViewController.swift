@@ -36,14 +36,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     
+    // MARK: - Navigation
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "ShowHistoryViewController") {
-            if let historyViewController = segue.destinationViewController as? HistoryViewController {
-                historyViewController.questionResponseArray = self.questionResponseArray!
+            if let navigationController = segue.destinationViewController as? UINavigationController {
+                if let historyViewController = navigationController.childViewControllers.first as? HistoryViewController {
+                    historyViewController.questionResponseArray = self.questionResponseArray!
+                }
             }
         }
     }
     
+    @IBAction func doneButtonPressed(segue: UIStoryboardSegue) {
+        
+    }
 
     // MARK: - UITextFieldDelegate
     
@@ -98,18 +105,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     
                     // Try to save the array to file
                     if let _questionResponseArray = self.questionResponseArray {
-                        let isSaveQuestionResponseSuccessful = NSKeyedArchiver.archiveRootObject(_questionResponseArray, toFile: QuestionResponseModel.ArchiveURL.path!)
-                        
-                        if (isSaveQuestionResponseSuccessful) {
-                            print("yes")
-                        }
-                        else {
-                            print("no :(");
-                        }
-                    }
-                    
-                    
-                    
+                        NSKeyedArchiver.archiveRootObject(_questionResponseArray, toFile: QuestionResponseModel.ArchiveURL.path!)
+                    }                    
                     
                     UIView.animateWithDuration(0.5, animations: { () -> Void in
                         self.responseLabel.alpha = 1
