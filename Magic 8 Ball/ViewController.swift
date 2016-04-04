@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate {
 
     var eightBall : EightBallModel?
+    var questionResponseArray : [QuestionResponseModel]?
+    
     
     @IBOutlet weak var questionTextField: UITextField!
     @IBOutlet weak var magicEightBallImageView: UIImageView!
@@ -20,6 +22,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
+        questionResponseArray = NSKeyedUnarchiver.unarchiveObjectWithFile(QuestionResponseModel.ArchiveURL.path!) as? [QuestionResponseModel]
+        if (questionResponseArray == nil) {
+            questionResponseArray = [QuestionResponseModel]()
+        }
         
         eightBall = EightBallModel()
         questionTextField?.delegate = self
@@ -31,8 +39,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     // MARK: - UITextFieldDelegate
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        
-        //
+
         if (textField == questionTextField) {
             shakeMagicEightBall(textField)
             return true
@@ -44,9 +51,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - IBAction
     
-    @IBAction func shakeButtonPressed(sender: AnyObject) {
-        shakeMagicEightBall(sender)
-    }
+//    @IBAction func historyButtonPressed(sender: AnyObject) {
+//        shakeMagicEightBall(sender)
+//    }
     
     
     // MARK: - Functions
@@ -83,6 +90,24 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 }, completion: { (_) -> Void in
                     self.magicEightBallImageView.image = magicEightBallImage
                     self.responseLabel.text = self.eightBall?.tellForturtune()
+                    
+                    // Append the question and response to the array
+                    self.questionResponseArray?.append(QuestionResponseModel(question: self.questionTextField.text!, response: self.responseLabel.text!))
+                    
+                    // Try to save the array to file
+                    if let _questionResponseArray = self.questionResponseArray {
+                        let isSaveQuestionResponseSuccessful = NSKeyedArchiver.archiveRootObject(_questionResponseArray, toFile: QuestionResponseModel.ArchiveURL.path!)
+                        
+                        if (isSaveQuestionResponseSuccessful) {
+                            print("yes")
+                        }
+                        else {
+                            print("no :(");
+                        }
+                    }
+                    
+                    
+                    
                     
                     UIView.animateWithDuration(0.5, animations: { () -> Void in
                         self.responseLabel.alpha = 1

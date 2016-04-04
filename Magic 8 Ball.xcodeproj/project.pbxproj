@@ -13,6 +13,8 @@
 		A1B6FF391C8C46BD00A5FAD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1B6FF381C8C46BD00A5FAD1 /* Assets.xcassets */; };
 		A1B6FF3C1C8C46BD00A5FAD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1B6FF3A1C8C46BD00A5FAD1 /* LaunchScreen.storyboard */; };
 		A1B6FF441C8C4B9700A5FAD1 /* EightBallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B6FF431C8C4B9700A5FAD1 /* EightBallModel.swift */; };
+		C1F839CE1CB22173000AB1AB /* QuestionResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F839CD1CB22173000AB1AB /* QuestionResponseModel.swift */; };
+		C1F839D01CB22943000AB1AB /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F839CF1CB22943000AB1AB /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		A1B6FF3B1C8C46BD00A5FAD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1B6FF3D1C8C46BD00A5FAD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1B6FF431C8C4B9700A5FAD1 /* EightBallModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EightBallModel.swift; sourceTree = "<group>"; };
+		C1F839CD1CB22173000AB1AB /* QuestionResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionResponseModel.swift; sourceTree = "<group>"; };
+		C1F839CF1CB22943000AB1AB /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				A1B6FF311C8C46BD00A5FAD1 /* AppDelegate.swift */,
 				A1B6FF331C8C46BD00A5FAD1 /* ViewController.swift */,
 				A1B6FF431C8C4B9700A5FAD1 /* EightBallModel.swift */,
+				C1F839CD1CB22173000AB1AB /* QuestionResponseModel.swift */,
+				C1F839CF1CB22943000AB1AB /* HistoryViewController.swift */,
 			);
 			path = "Magic 8 Ball";
 			sourceTree = "<group>";
@@ -141,6 +147,8 @@
 			files = (
 				A1B6FF341C8C46BD00A5FAD1 /* ViewController.swift in Sources */,
 				A1B6FF321C8C46BD00A5FAD1 /* AppDelegate.swift in Sources */,
+				C1F839CE1CB22173000AB1AB /* QuestionResponseModel.swift in Sources */,
+				C1F839D01CB22943000AB1AB /* HistoryViewController.swift in Sources */,
 				A1B6FF441C8C4B9700A5FAD1 /* EightBallModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
