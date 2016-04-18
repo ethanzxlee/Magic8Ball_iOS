@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A12EAEDF1CC4EBC900F50F0C /* as_i_see_it_yes.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A12EAECB1CC4EBC900F50F0C /* as_i_see_it_yes.m4a */; };
+		A12EAEE01CC4EBC900F50F0C /* ask_again_later.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A12EAECC1CC4EBC900F50F0C /* ask_again_later.m4a */; };
+		A12EAEE11CC4EBC900F50F0C /* better_not_tell_you_now.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A12EAECD1CC4EBC900F50F0C /* better_not_tell_you_now.m4a */; };
+		A12EAEE21CC4EBC900F50F0C /* cannot_predict_now.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A12EAECE1CC4EBC900F50F0C /* cannot_predict_now.m4a */; };
+		A12EAEE31CC4EBC900F50F0C /* concentrate_and_ask_again.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A12EAECF1CC4EBC900F50F0C /* concentrate_and_ask_again.m4a */; };
+		A12EAEE41CC4EBC900F50F0C /* dont_count_on_it.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A12EAED01CC4EBC900F50F0C /* dont_count_on_it.m4a */; };
+		A12EAEE51CC4EBC900F50F0C /* it_is_certain.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A12EAED11CC4EBC900F50F0C /* it_is_certain.m4a */; };
+		A12EAEE61CC4EBC900F50F0C /* it_is_decidedly.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A12EAED21CC4EBC900F50F0C /* it_is_decidedly.m4a */; };
+		A12EAEE71CC4EBC900F50F0C /* most_likely.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A12EAED31CC4EBC900F50F0C /* most_likely.m4a */; };
+		A12EAEE81CC4EBC900F50F0C /* my_reply_is_no.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A12EAED41CC4EBC900F50F0C /* my_reply_is_no.m4a */; };
+		A12EAEE91CC4EBC900F50F0C /* my_sources_say_no.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A12EAED51CC4EBC900F50F0C /* my_sources_say_no.m4a */; };
+		A12EAEEA1CC4EBC900F50F0C /* outlook_good.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A12EAED61CC4EBC900F50F0C /* outlook_good.m4a */; };
+		A12EAEEB1CC4EBC900F50F0C /* outlook_not_so_good.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A12EAED71CC4EBC900F50F0C /* outlook_not_so_good.m4a */; };
+		A12EAEEC1CC4EBC900F50F0C /* reply_hazy_try_again.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A12EAED81CC4EBC900F50F0C /* reply_hazy_try_again.m4a */; };
+		A12EAEED1CC4EBC900F50F0C /* signs_point_to_yes.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A12EAED91CC4EBC900F50F0C /* signs_point_to_yes.m4a */; };
+		A12EAEEE1CC4EBC900F50F0C /* very_doubtful.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A12EAEDA1CC4EBC900F50F0C /* very_doubtful.m4a */; };
+		A12EAEEF1CC4EBC900F50F0C /* without_a_doubt.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A12EAEDB1CC4EBC900F50F0C /* without_a_doubt.m4a */; };
+		A12EAEF01CC4EBC900F50F0C /* yes_definitely.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A12EAEDC1CC4EBC900F50F0C /* yes_definitely.m4a */; };
+		A12EAEF11CC4EBC900F50F0C /* yes.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A12EAEDD1CC4EBC900F50F0C /* yes.m4a */; };
+		A12EAEF21CC4EBC900F50F0C /* you_may_rely_on_it.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A12EAEDE1CC4EBC900F50F0C /* you_may_rely_on_it.m4a */; };
 		A1B6FF321C8C46BD00A5FAD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B6FF311C8C46BD00A5FAD1 /* AppDelegate.swift */; };
 		A1B6FF341C8C46BD00A5FAD1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B6FF331C8C46BD00A5FAD1 /* ViewController.swift */; };
 		A1B6FF371C8C46BD00A5FAD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1B6FF351C8C46BD00A5FAD1 /* Main.storyboard */; };
@@ -18,6 +38,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A12EAECB1CC4EBC900F50F0C /* as_i_see_it_yes.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = as_i_see_it_yes.m4a; sourceTree = "<group>"; };
+		A12EAECC1CC4EBC900F50F0C /* ask_again_later.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = ask_again_later.m4a; sourceTree = "<group>"; };
+		A12EAECD1CC4EBC900F50F0C /* better_not_tell_you_now.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = better_not_tell_you_now.m4a; sourceTree = "<group>"; };
+		A12EAECE1CC4EBC900F50F0C /* cannot_predict_now.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = cannot_predict_now.m4a; sourceTree = "<group>"; };
+		A12EAECF1CC4EBC900F50F0C /* concentrate_and_ask_again.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = concentrate_and_ask_again.m4a; sourceTree = "<group>"; };
+		A12EAED01CC4EBC900F50F0C /* dont_count_on_it.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = dont_count_on_it.m4a; sourceTree = "<group>"; };
+		A12EAED11CC4EBC900F50F0C /* it_is_certain.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = it_is_certain.m4a; sourceTree = "<group>"; };
+		A12EAED21CC4EBC900F50F0C /* it_is_decidedly.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = it_is_decidedly.m4a; sourceTree = "<group>"; };
+		A12EAED31CC4EBC900F50F0C /* most_likely.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = most_likely.m4a; sourceTree = "<group>"; };
+		A12EAED41CC4EBC900F50F0C /* my_reply_is_no.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = my_reply_is_no.m4a; sourceTree = "<group>"; };
+		A12EAED51CC4EBC900F50F0C /* my_sources_say_no.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = my_sources_say_no.m4a; sourceTree = "<group>"; };
+		A12EAED61CC4EBC900F50F0C /* outlook_good.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = outlook_good.m4a; sourceTree = "<group>"; };
+		A12EAED71CC4EBC900F50F0C /* outlook_not_so_good.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = outlook_not_so_good.m4a; sourceTree = "<group>"; };
+		A12EAED81CC4EBC900F50F0C /* reply_hazy_try_again.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = reply_hazy_try_again.m4a; sourceTree = "<group>"; };
+		A12EAED91CC4EBC900F50F0C /* signs_point_to_yes.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = signs_point_to_yes.m4a; sourceTree = "<group>"; };
+		A12EAEDA1CC4EBC900F50F0C /* very_doubtful.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = very_doubtful.m4a; sourceTree = "<group>"; };
+		A12EAEDB1CC4EBC900F50F0C /* without_a_doubt.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = without_a_doubt.m4a; sourceTree = "<group>"; };
+		A12EAEDC1CC4EBC900F50F0C /* yes_definitely.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = yes_definitely.m4a; sourceTree = "<group>"; };
+		A12EAEDD1CC4EBC900F50F0C /* yes.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = yes.m4a; sourceTree = "<group>"; };
+		A12EAEDE1CC4EBC900F50F0C /* you_may_rely_on_it.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = you_may_rely_on_it.m4a; sourceTree = "<group>"; };
 		A1B6FF2E1C8C46BD00A5FAD1 /* Magic 8 Ball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Magic 8 Ball.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1B6FF311C8C46BD00A5FAD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1B6FF331C8C46BD00A5FAD1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +100,7 @@
 		A1B6FF301C8C46BD00A5FAD1 /* Magic 8 Ball */ = {
 			isa = PBXGroup;
 			children = (
+				A1D185311CC47AA500393E18 /* SoundAssets */,
 				A1B6FF381C8C46BD00A5FAD1 /* Assets.xcassets */,
 				A1B6FF351C8C46BD00A5FAD1 /* Main.storyboard */,
 				A1B6FF3A1C8C46BD00A5FAD1 /* LaunchScreen.storyboard */,
@@ -69,6 +110,33 @@
 				C1F839D11CB22DDA000AB1AB /* Model */,
 			);
 			path = "Magic 8 Ball";
+			sourceTree = "<group>";
+		};
+		A1D185311CC47AA500393E18 /* SoundAssets */ = {
+			isa = PBXGroup;
+			children = (
+				A12EAECB1CC4EBC900F50F0C /* as_i_see_it_yes.m4a */,
+				A12EAECC1CC4EBC900F50F0C /* ask_again_later.m4a */,
+				A12EAECD1CC4EBC900F50F0C /* better_not_tell_you_now.m4a */,
+				A12EAECE1CC4EBC900F50F0C /* cannot_predict_now.m4a */,
+				A12EAECF1CC4EBC900F50F0C /* concentrate_and_ask_again.m4a */,
+				A12EAED01CC4EBC900F50F0C /* dont_count_on_it.m4a */,
+				A12EAED11CC4EBC900F50F0C /* it_is_certain.m4a */,
+				A12EAED21CC4EBC900F50F0C /* it_is_decidedly.m4a */,
+				A12EAED31CC4EBC900F50F0C /* most_likely.m4a */,
+				A12EAED41CC4EBC900F50F0C /* my_reply_is_no.m4a */,
+				A12EAED51CC4EBC900F50F0C /* my_sources_say_no.m4a */,
+				A12EAED61CC4EBC900F50F0C /* outlook_good.m4a */,
+				A12EAED71CC4EBC900F50F0C /* outlook_not_so_good.m4a */,
+				A12EAED81CC4EBC900F50F0C /* reply_hazy_try_again.m4a */,
+				A12EAED91CC4EBC900F50F0C /* signs_point_to_yes.m4a */,
+				A12EAEDA1CC4EBC900F50F0C /* very_doubtful.m4a */,
+				A12EAEDB1CC4EBC900F50F0C /* without_a_doubt.m4a */,
+				A12EAEDC1CC4EBC900F50F0C /* yes_definitely.m4a */,
+				A12EAEDD1CC4EBC900F50F0C /* yes.m4a */,
+				A12EAEDE1CC4EBC900F50F0C /* you_may_rely_on_it.m4a */,
+			);
+			name = SoundAssets;
 			sourceTree = "<group>";
 		};
 		C1F839D11CB22DDA000AB1AB /* Model */ = {
@@ -148,9 +216,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A12EAEEA1CC4EBC900F50F0C /* outlook_good.m4a in Resources */,
 				A1B6FF3C1C8C46BD00A5FAD1 /* LaunchScreen.storyboard in Resources */,
+				A12EAEE21CC4EBC900F50F0C /* cannot_predict_now.m4a in Resources */,
+				A12EAEED1CC4EBC900F50F0C /* signs_point_to_yes.m4a in Resources */,
+				A12EAEE31CC4EBC900F50F0C /* concentrate_and_ask_again.m4a in Resources */,
+				A12EAEE01CC4EBC900F50F0C /* ask_again_later.m4a in Resources */,
+				A12EAEE81CC4EBC900F50F0C /* my_reply_is_no.m4a in Resources */,
+				A12EAEE51CC4EBC900F50F0C /* it_is_certain.m4a in Resources */,
+				A12EAEE91CC4EBC900F50F0C /* my_sources_say_no.m4a in Resources */,
+				A12EAEE11CC4EBC900F50F0C /* better_not_tell_you_now.m4a in Resources */,
 				A1B6FF391C8C46BD00A5FAD1 /* Assets.xcassets in Resources */,
 				A1B6FF371C8C46BD00A5FAD1 /* Main.storyboard in Resources */,
+				A12EAEDF1CC4EBC900F50F0C /* as_i_see_it_yes.m4a in Resources */,
+				A12EAEE61CC4EBC900F50F0C /* it_is_decidedly.m4a in Resources */,
+				A12EAEEC1CC4EBC900F50F0C /* reply_hazy_try_again.m4a in Resources */,
+				A12EAEEB1CC4EBC900F50F0C /* outlook_not_so_good.m4a in Resources */,
+				A12EAEEF1CC4EBC900F50F0C /* without_a_doubt.m4a in Resources */,
+				A12EAEEE1CC4EBC900F50F0C /* very_doubtful.m4a in Resources */,
+				A12EAEF21CC4EBC900F50F0C /* you_may_rely_on_it.m4a in Resources */,
+				A12EAEE41CC4EBC900F50F0C /* dont_count_on_it.m4a in Resources */,
+				A12EAEE71CC4EBC900F50F0C /* most_likely.m4a in Resources */,
+				A12EAEF11CC4EBC900F50F0C /* yes.m4a in Resources */,
+				A12EAEF01CC4EBC900F50F0C /* yes_definitely.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +367,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Magic 8 Ball/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "au.edu.uow.zxl653.Magic-8-Ball";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -290,6 +379,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Magic 8 Ball/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "au.edu.uow.zxl653.Magic-8-Ball";
 				PRODUCT_NAME = "$(TARGET_NAME)";

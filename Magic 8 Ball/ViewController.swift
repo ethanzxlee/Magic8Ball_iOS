@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import AVFoundation
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDelegate {
 
     var eightBall : EightBallModel?
     var questionResponseArray : [QuestionResponseModel]?
+    var audioPlayer : AVAudioPlayer?
     
     
     @IBOutlet weak var questionTextField: UITextField!
@@ -22,7 +24,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
 
         questionResponseArray = NSKeyedUnarchiver.unarchiveObjectWithFile(QuestionResponseModel.ArchiveURL.path!) as? [QuestionResponseModel]
         if (questionResponseArray == nil) {
@@ -98,15 +99,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 
                 }, completion: { (_) -> Void in
                     self.magicEightBallImageView.image = magicEightBallImage
-                    self.responseLabel.text = self.eightBall?.tellForturtune()
+                    
+                    let response = self.eightBall?.tellForturtune()
+                    self.responseLabel.text = response!.text
                     
                     // Append the question and response to the array
                     self.questionResponseArray?.append(QuestionResponseModel(question: self.questionTextField.text!, response: self.responseLabel.text!))
+                    self.archiveResponseToFile()
                     
-                    // Try to save the array to file
-                    if let _questionResponseArray = self.questionResponseArray {
-                        NSKeyedArchiver.archiveRootObject(_questionResponseArray, toFile: QuestionResponseModel.ArchiveURL.path!)
-                    }                    
+                    // playResponse
+                    self.playResponseWith(audioFilename: response!.audioFilename, fileType: response!.fileType)
+                    
                     
                     UIView.animateWithDuration(0.5, animations: { () -> Void in
                         self.responseLabel.alpha = 1
@@ -117,11 +120,39 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    
+    func archiveResponseToFile() {
+        // Try to save the array to file
+        if let _questionResponseArray = self.questionResponseArray {
+            NSKeyedArchiver.archiveRootObject(_questionResponseArray, toFile: QuestionResponseModel.ArchiveURL.path!)
+        }
+
+    }
+    
+    
+    func playResponseWith(audioFilename audioFilename: String, fileType: String) {
+        if let bundlePath = NSBundle.mainBundle().pathForResource(audioFilename, ofType: fileType){
+            let url = NSURL.fileURLWithPath(bundlePath)
+            do {
+                try audioPlayer = AVAudioPlayer(contentsOfURL: url)
+                
+                audioPlayer?.prepareToPlay()
+                audioPlayer?.play()
+            }
+            catch {
+            }
+        }
+    }
+    
+    
     func didDetectTapGesture(gestureRecognizer: UITapGestureRecognizer) {
         if (questionTextField.isFirstResponder()) {
             questionTextField.resignFirstResponder()
         }
     }
+    
+    
+
 
 
 }
