@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  Magic 8 Ball
+
+  Created by Zhe Xian Lee on 02/05/2016.
+  Copyright © 2016 Zhe Xian Lee. All rights reserved.
+*/
+"No question asked"="No question asked";
+"Please ask a question before shaking the magic eight ball."="Please ask a question before shaking the magic eight ball.";
+"OK"="OK";
+"It is certain"="It is certain";
+"It is decidedly so"="It is decidedly so";
+"Without a doubt"="Without a doubt";
+"Yes, definitely"="Yes, definitely";
+"You may rely on it"="You may rely on it";
+"As I see it, yes"="As I see it, yes";
+"Most likely"="Most likely";
+"Outlook good"="Outlook good";
+"Yes"="Yes";
+"Signs point to yes"="Signs point to yes";
+"Reply hazy try again"="Reply hazy try again";
+"Ask again later"="Ask again later";
+"Better not tell you now"="Better not tell you now";
+"Cannot predict now"="Cannot predict now";
+"Concentrate and ask again"="Concentrate and ask again";
+"Don't count on it"="Don't count on it";
+"My reply is no"="My reply is no";
+"My sources say no"="My sources say no";
+"Outlook not so good"="Outlook not so good";
+"Very doubtful"="Very doubtful";

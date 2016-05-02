@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "OGU-Ts-dDD"; */
+"OGU-Ts-dDD.text" = "标题";
+
+/* Class = "UINavigationItem"; title = "History"; ObjectID = "c2R-I1-PGZ"; */
+"c2R-I1-PGZ.title" = "历史";
+
+/* Class = "UIButton"; normalTitle = "History"; ObjectID = "hRp-6P-oxd"; */
+"hRp-6P-oxd.normalTitle" = "历史";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "nye-wU-xHB"; */
+"nye-wU-xHB.text" = "细节";

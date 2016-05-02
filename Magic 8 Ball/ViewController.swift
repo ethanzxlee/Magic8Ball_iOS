@@ -14,7 +14,7 @@ class ViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDelega
     var eightBall : EightBallModel?
     var questionResponseArray : [QuestionResponseModel]?
     var audioPlayer : AVAudioPlayer?
-    
+    var speechSynthersizer : AVSpeechSynthesizer?
     
     @IBOutlet weak var questionTextField: UITextField!
     @IBOutlet weak var magicEightBallImageView: UIImageView!
@@ -24,7 +24,9 @@ class ViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        speechSynthersizer = AVSpeechSynthesizer()
+        
         questionResponseArray = NSKeyedUnarchiver.unarchiveObjectWithFile(QuestionResponseModel.ArchiveURL.path!) as? [QuestionResponseModel]
         if (questionResponseArray == nil) {
             questionResponseArray = [QuestionResponseModel]()
@@ -72,8 +74,8 @@ class ViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDelega
         
         // Display an alert if the text field is empty
         if (questionTextField.text?.characters.count == 0) {
-            let alert = UIAlertController(title: "No question asked", message: "Please ask a question before shaking the magic eight ball.", preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            let alert = UIAlertController(title: NSLocalizedString("No question asked", comment: ""), message: NSLocalizedString("Please ask a question before shaking the magic eight ball.", comment: ""), preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .Default, handler: nil))
             
             self.presentViewController(alert, animated: true, completion: nil)
             return
@@ -108,7 +110,7 @@ class ViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDelega
                     self.archiveResponseToFile()
                     
                     // playResponse
-                    self.playResponseWith(audioFilename: response!.audioFilename, fileType: response!.fileType)
+                    self.playResponseWith(response!.text)
                     
                     
                     UIView.animateWithDuration(0.5, animations: { () -> Void in
@@ -130,18 +132,9 @@ class ViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDelega
     }
     
     
-    func playResponseWith(audioFilename audioFilename: String, fileType: String) {
-        if let bundlePath = NSBundle.mainBundle().pathForResource(audioFilename, ofType: fileType){
-            let url = NSURL.fileURLWithPath(bundlePath)
-            do {
-                try audioPlayer = AVAudioPlayer(contentsOfURL: url)
-                
-                audioPlayer?.prepareToPlay()
-                audioPlayer?.play()
-            }
-            catch {
-            }
-        }
+    func playResponseWith(response: String) {
+        speechSynthersizer?.speakUtterance(AVSpeechUtterance(string: response));
+        
     }
     
     

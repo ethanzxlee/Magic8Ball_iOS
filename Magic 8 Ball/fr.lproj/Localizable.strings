@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  Magic 8 Ball
+
+  Created by Zhe Xian Lee on 02/05/2016.
+  Copyright © 2016 Zhe Xian Lee. All rights reserved.
+*/
+"No question asked"="Aucune question posée";
+"Please ask a question before shaking the magic eight ball."="S'il vous plaît poser une question avant de secouer les huit boule magique.";
+"OK"="D'accord";
+"It is certain"="Il est certain";
+"It is decidedly so"="Il est décidément donc";
+"Without a doubt"="Sans aucun doute";
+"Yes, definitely"="Oui définitivement";
+"You may rely on it"="Vous pouvez compter sur elle";
+"As I see it, yes"="Comme je le vois oui";
+"Most likely"="Le plus probable";
+"Outlook good"="Bonne perspective";
+"Yes"="Oui";
+"Signs point to yes"="Les signes pointent vers Oui";
+"Reply hazy try again"="Répondre à nouveau essayer brumeux";
+"Ask again later"="Demander à nouveau plus tard";
+"Better not tell you now"="Mieux vaut ne pas vous dire maintenant";
+"Cannot predict now"="Vous ne pouvez pas prédire maintenant";
+"Concentrate and ask again"="Concentrer et demander à nouveau";
+"Don't count on it"="Ne pas compter sur elle";
+"My reply is no"="Ma réponse est non";
+"My sources say no"="Mes sources disent non";
+"Outlook not so good"="Perspectives pas si bon";
+"Very doubtful"="Très douteux";
