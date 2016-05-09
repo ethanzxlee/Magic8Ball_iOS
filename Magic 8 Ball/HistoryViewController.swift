@@ -11,10 +11,39 @@ import UIKit
 class HistoryViewController: UITableViewController {
 
     var questionResponseArray : [QuestionResponseModel] = []
+    var task: NSURLSessionDataTask?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let session = NSURLSession.sharedSession()
+        
+        let url = NSURLComponents(string: "http://li859-75.members.linode.com/retrieveAllEntries.php")?.URL
+        
+        task = session.dataTaskWithRequest(NSURLRequest(URL: url!), completionHandler: { (data, response, error) -> Void in
+            guard let _data = data , let _response = response where error == nil else {
+                print(error)
+                return
+            }
+            
+            guard let dataString = NSString(data: _data, encoding: NSUTF8StringEncoding) else {
+                return
+            }
+            
+            
+            do {
+                let parsedObjects = try NSJSONSerialization.JSONObjectWithData(_data, options: NSJSONReadingOptions.MutableContainers) as! [[String: String]]
+                print(parsedObjects)
+            }
+            catch {
+                print(error)
+            }
+            
+        })
+        
+        task?.resume()
+        
+
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
