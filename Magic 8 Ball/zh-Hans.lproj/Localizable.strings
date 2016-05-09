@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  Magic 8 Ball
+
+  Created by Zhe Xian Lee on 02/05/2016.
+  Copyright © 2016 Zhe Xian Lee. All rights reserved.
+*/
+"No question asked"="没法问问题";
+"Please ask a question before shaking the magic eight ball."="请发问问题";
+"OK"="确定";
+"It is certain"="可以肯定的是";
+"It is decidedly so"="它是如此决然";
+"Without a doubt"="毫无疑问";
+"Yes, definitely"="当然是";
+"You may rely on it"="你可以依靠它";
+"As I see it, yes"="在我看来，是";
+"Most likely"="最有可能的";
+"Outlook good"="展望良好";
+"Yes"="是";
+"Signs point to yes"="迹象表明，是";
+"Reply hazy try again"="再次回复朦胧的尝试";
+"Ask again later"="后来再次询问";
+"Better not tell you now"="最好不要告诉你现在";
+"Cannot predict now"="现在不能预测";
+"Concentrate and ask again"="集中注意力，再次询问";
+"Don't count on it"="别指望那会发生";
+"My reply is no"="我的回答是不";
+"My sources say no"="我的消息来源说没有";
+"Outlook not so good"="展望不太好";
+"Very doubtful"="很值得怀疑";
