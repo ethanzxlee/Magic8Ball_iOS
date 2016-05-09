@@ -11,8 +11,9 @@ import AVFoundation
 
 class ViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDelegate {
 
+    let postEntryURLComponent = NSURLComponents(string: "http://li859-75.members.linode.com/addEntry.php")
+    
     var eightBall : EightBallModel?
-    var questionResponseArray : [QuestionResponseModel]?
     var audioPlayer : AVAudioPlayer?
     var speechSynthersizer : AVSpeechSynthesizer?
     
@@ -27,11 +28,6 @@ class ViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDelega
         
         speechSynthersizer = AVSpeechSynthesizer()
         
-        questionResponseArray = NSKeyedUnarchiver.unarchiveObjectWithFile(QuestionResponseModel.ArchiveURL.path!) as? [QuestionResponseModel]
-        if (questionResponseArray == nil) {
-            questionResponseArray = [QuestionResponseModel]()
-        }
-        
         eightBall = EightBallModel()
         questionTextField?.delegate = self
         
@@ -41,19 +37,10 @@ class ViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDelega
     
     // MARK: - Navigation
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "ShowHistoryViewController") {
-            if let navigationController = segue.destinationViewController as? UINavigationController {
-                if let historyViewController = navigationController.childViewControllers.first as? HistoryViewController {
-                    historyViewController.questionResponseArray = self.questionResponseArray!
-                }
-            }
-        }
-    }
-    
     @IBAction func doneButtonPressed(segue: UIStoryboardSegue) {
         
     }
+    
 
     // MARK: - UITextFieldDelegate
     
@@ -105,11 +92,10 @@ class ViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDelega
                     let response = self.eightBall?.tellForturtune()
                     self.responseLabel.text = response!.text
                     
-                    // Append the question and response to the array
-                    self.questionResponseArray?.append(QuestionResponseModel(question: self.questionTextField.text!, response: self.responseLabel.text!))
-                    self.archiveResponseToFile()
+                    // send the response to server
+                    self.postResponseToServer(question: self.questionTextField.text!, response: self.responseLabel.text!);
                     
-                    // playResponse
+                    // Play response
                     self.playResponseWith(response!.text)
                     
                     
@@ -123,17 +109,36 @@ class ViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDelega
     }
     
     
-    func archiveResponseToFile() {
-        // Try to save the array to file
-        if let _questionResponseArray = self.questionResponseArray {
-            NSKeyedArchiver.archiveRootObject(_questionResponseArray, toFile: QuestionResponseModel.ArchiveURL.path!)
-        }
-
+    func playResponseWith(response: String) {
+        speechSynthersizer?.speakUtterance(AVSpeechUtterance(string: response));
     }
     
     
-    func playResponseWith(response: String) {
-        speechSynthersizer?.speakUtterance(AVSpeechUtterance(string: response));
+    func postResponseToServer(question question: String, response: String) {
+        let bodyString = "question=\(question)&answer=\(response)&username=zxl653";
+        
+        let postResponseRequest = NSMutableURLRequest(URL: postEntryURLComponent!.URL!)
+        postResponseRequest.HTTPMethod = "POST"
+        postResponseRequest.HTTPBody = bodyString.dataUsingEncoding(NSUTF8StringEncoding)
+        
+        let postResponseTask = NSURLSession.sharedSession().dataTaskWithRequest(postResponseRequest) { (data, response, error) -> Void in
+            // Check if there's any error
+            guard let _response = response as? NSHTTPURLResponse where error == nil else {
+                print(error)
+                return
+            }
+            
+            // Check if the response status code is OK before continuing
+            if (_response.statusCode == 200) {
+               print("Entry added")
+            }
+            else {
+                print(_response)
+            }
+
+        }
+        
+        postResponseTask.resume()
         
     }
     
@@ -144,9 +149,6 @@ class ViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDelega
         }
     }
     
-    
-
-
 
 }
 

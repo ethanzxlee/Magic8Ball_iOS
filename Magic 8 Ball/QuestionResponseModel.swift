@@ -14,10 +14,14 @@ class QuestionResponseModel : NSObject, NSCoding {
     
     var question : String
     var response : String
+    var username : String
+    var imageURL : String 
     
     struct PropertyKey {
         static let questionKey = "question"
         static let responseKey = "response"
+        static let usernameKey = "username"
+        static let imageURLKey = "imageURL"
     }
     
     // MARK: Archiving Paths
@@ -28,21 +32,27 @@ class QuestionResponseModel : NSObject, NSCoding {
     
     // MARK: NSCoding
     
-    init(question: String, response: String) {
+    init(question: String, response: String, username: String, imageURL: String) {
         self.question = question
         self.response = response
+        self.username = username;
+        self.imageURL = imageURL;
         super.init()
     }
     
     required convenience init? (coder aDecoder: NSCoder) {
         let question = aDecoder.decodeObjectForKey(PropertyKey.questionKey) as! String
         let response = aDecoder.decodeObjectForKey(PropertyKey.responseKey) as! String
-        self.init(question: question, response: response)
+        let username = aDecoder.decodeObjectForKey(PropertyKey.usernameKey) as! String
+        let imageURL = aDecoder.decodeObjectForKey(PropertyKey.imageURLKey) as! String
+        self.init(question: question, response: response, username: username, imageURL: imageURL)
     }
     
     func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(question, forKey: PropertyKey.questionKey)
         aCoder.encodeObject(response, forKey: PropertyKey.responseKey)
+        aCoder.encodeObject(username, forKey: PropertyKey.usernameKey)
+        aCoder.encodeObject(imageURL, forKey: PropertyKey.imageURLKey)
     }
     
     
