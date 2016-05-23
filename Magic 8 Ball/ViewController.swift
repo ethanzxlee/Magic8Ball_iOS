@@ -31,7 +31,7 @@ class ViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDelega
         eightBall = EightBallModel()
         questionTextField?.delegate = self
         
-        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "didDetectTapGesture:"))
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ViewController.didDetectTapGesture(_:))))
     }
     
     
